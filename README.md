@@ -17,4 +17,14 @@ docker run -d --name globeco-trade-blotter-postgresql \
   kasbench/globeco-trade-blotter-posgresql
 ```
 
+With network
+
+```
+docker run -d --name globeco-trade-blotter-postgresql \
+  -p 5432:5432 \
+  -e POSTGRES_HOST_AUTH_METHOD=trust \
+  --network my-network \
+  kasbench/globeco-trade-blotter-posgresql
+```
+
 
